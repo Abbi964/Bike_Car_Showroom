@@ -1,8 +1,14 @@
-import express from "express";
-import {postSignup} from '../controller/user'
+// import express from "express";
+// import {postSignup} from '../controller/userController'
+const express = require('express')
+const userController = require('../controller/userController')
 
-const router = express.Router()
+const userRouter = express.Router()
 
-router.post('/signup',postSignup)
+// POST SIGNUP
+userRouter.post('/signup',userController.postSignup);
 
-module.exports = router;
+// POST LOGIN
+userRouter.post('/login',userController.postLogin)
+
+module.exports = userRouter;
