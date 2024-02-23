@@ -58,7 +58,7 @@ exports.postLogin = async(req,res)=>{
                 }
                 else{
                     // sending JWT with id and admin info
-                    let accessToken = jwt.sign({id : user._id, isAdmin : user.isAdmin},process.env.JWT_KEY)
+                    let accessToken = jwt.sign({id : user._id},process.env.JWT_KEY)
                     res.status(200).json({accessToken})
                 }
             })

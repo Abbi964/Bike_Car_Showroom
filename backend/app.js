@@ -10,6 +10,7 @@ const bodyParser = require('body-parser')
 // importing routes
 // import userRouter from './routes/users.js';
 const userRouter = require('./routes/users');
+const adminRouter = require('./routes/admin')
 
 const app = express();
 // configuring dotenv
@@ -20,6 +21,7 @@ app.use(bodyParser.json())
 
 // using routes
 app.use('/user',userRouter)
+app.use('/admin',adminRouter)
 
 mongoose.connect(process.env.MONGO_DB_URL)
     .then(()=>{
