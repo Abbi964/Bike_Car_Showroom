@@ -8,13 +8,16 @@ import fuel_logo from '../../assets/vehicle/fuel.png'
 import transmission_logo from '../../assets/vehicle/transmission.png'
 
 function VehicleItem(props){
+    function toUpperCaseFirst(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
 
     return(
         <div id={props.vehicle._id} className={classes.vehicleItem}>
             <Image className={classes.vehicleImg} src={props.vehicle.images[0]} rounded/>
             <div className={classes.details}>
                 <h4>
-                    {`${props.vehicle.make}   ${props.vehicle.model} ( ${props.vehicle.year} )`}
+                    {`${toUpperCaseFirst(props.vehicle.make)}  ${toUpperCaseFirst(props.vehicle.model)} ( ${props.vehicle.year} )`}
                     <Badge text='dark' bg='light' pill>{props.vehicle.isUsed ? 'used' : 'new'}</Badge>
                 </h4>
                 <p className={classes.description}>{props.vehicle.description}</p>

@@ -1,27 +1,22 @@
-import React, { Fragment, useEffect, useState } from "react";
-import axios from 'axios'
+import React, { Fragment, useContext} from "react";
+// import axios from 'axios'
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Filter from "../components/vehicles/Filter";
 import Vehicles from "../components/vehicles/Vehicles";
+// import { serverUrl } from "../util/util";
+import VehicleContext from "../store/vehicle-context";
 
 function VehiclesPage(props){
-    const [vehicles, setVehicles] = useState([])
-    // using useEffect to get all vehicles
-    useEffect(()=>{
-        axios.get('http://localhost:5000/vehicle/all_vehicles')
-            .then(response=>{
-                console.log(response)
-                setVehicles(response.data.vehicles)
-            })
-    },[])
-
+    const vhclCtx = useContext(VehicleContext)
+    
+    console.log(vhclCtx.vehicles)
     return(
         <Fragment>
             <Header/>
             <div style={{flexWrap : 'wrap'}} className="d-flex p-3 justify-content-around">
                 <Filter/>
-                <Vehicles vehicles={vehicles}/>
+                <Vehicles vehicles={vhclCtx.vehicles}/>
             </div>
             <Footer/>
         </Fragment>
