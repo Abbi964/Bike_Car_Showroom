@@ -1,0 +1,35 @@
+.vehicleItem{
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+    border-bottom: 2px solid;
+}
+
+.details{
+    width: 61%;
+}
+
+.vehicleImg{
+    width: 18rem;
+    margin-right: 1rem;
+}
+
+img{
+    width: 1rem;
+    margin-right: 3px;
+}
+
+.detailsUl{
+    list-style-type: none;
+}
+.detailsUl li{
+    margin-bottom: 10px;
+}
+.detailsUl span{
+    font-weight: 500;
+}
+
+.price{
+    color : #03d39b;
+}

@@ -1,11 +1,11 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 import classes from './Footer.module.css'
-import fb_icon from '../../assets/facebook_logo.png'
-import insta_icon from '../../assets/insta_logo.png'
-import lnkd_icon from '../../assets/linkedin_logo.png'
-import twt_icon from '../../assets/twitter_logo.png'
-import yt_icon from '../../assets/youtube_logo.png'
+import fb_icon from '../../assets/social/facebook_logo.png'
+import insta_icon from '../../assets/social/insta_logo.png'
+import lnkd_icon from '../../assets/social/linkedin_logo.png'
+import twt_icon from '../../assets/social/twitter_logo.png'
+import yt_icon from '../../assets/social/youtube_logo.png'
 
 function Footer(props){
 

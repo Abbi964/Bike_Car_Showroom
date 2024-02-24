@@ -6,15 +6,18 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 // importing routes
 // import userRouter from './routes/users.js';
 const userRouter = require('./routes/users');
-const adminRouter = require('./routes/admin')
+const adminRouter = require('./routes/admin');
+const vehicleRouter = require('./routes/vehicle')
 
 const app = express();
 // configuring dotenv
 // dotenv.config()
+app.use(cors())
 
 // using body-parser
 app.use(bodyParser.json())
@@ -22,6 +25,7 @@ app.use(bodyParser.json())
 // using routes
 app.use('/user',userRouter)
 app.use('/admin',adminRouter)
+app.use('/vehicle',vehicleRouter)
 
 mongoose.connect(process.env.MONGO_DB_URL)
     .then(()=>{

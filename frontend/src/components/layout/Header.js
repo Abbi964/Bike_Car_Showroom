@@ -5,12 +5,12 @@ import classes from "./Header.module.css"
 
 function Header() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar style={{position:'fixed',top:'0',width:'100%'}} expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="/">SSzone</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav style={{gap:'2rem'}} className="me-auto ms-5">
             <NavLink className={classes.nav_link} to="/vehicles">Buy</NavLink>
             <NavLink className={classes.nav_link} to="#home">Finance</NavLink>
             <NavLink className={classes.nav_link} to="#home">Book Appointment</NavLink>
