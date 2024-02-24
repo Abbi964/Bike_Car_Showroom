@@ -5,7 +5,7 @@ import classes from "./Header.module.css"
 
 function Header() {
   return (
-    <Navbar style={{position:'fixed',top:'0',width:'100%'}} expand="lg" className="bg-body-tertiary">
+    <Navbar style={{position:'fixed',top:'0',width:'100%',zIndex:'2'}} expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="/">SSzone</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

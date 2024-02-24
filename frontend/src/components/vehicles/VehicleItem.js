@@ -1,8 +1,8 @@
 import React from 'react'
 import classes from './VehicleItem.module.css'
-import { Button, Image } from 'react-bootstrap';
+import { Badge, Button, Image } from 'react-bootstrap';
 import color_logo from '../../assets/vehicle/color.png'
-import calender_logo from '../../assets/vehicle/calender.png'
+import milage_logo from '../../assets/vehicle/milage.png'
 import engine_logo from '../../assets/vehicle/engine.png'
 import fuel_logo from '../../assets/vehicle/fuel.png'
 import transmission_logo from '../../assets/vehicle/transmission.png'
@@ -13,7 +13,10 @@ function VehicleItem(props){
         <div id={props.vehicle._id} className={classes.vehicleItem}>
             <Image className={classes.vehicleImg} src={props.vehicle.images[0]} rounded/>
             <div className={classes.details}>
-                <h4>{`${props.vehicle.make}   ${props.vehicle.model} ( ${props.vehicle.year} )`}</h4>
+                <h4>
+                    {`${props.vehicle.make}   ${props.vehicle.model} ( ${props.vehicle.year} )`}
+                    <Badge text='dark' bg='light' pill>{props.vehicle.isUsed ? 'used' : 'new'}</Badge>
+                </h4>
                 <p className={classes.description}>{props.vehicle.description}</p>
                 
                 <div id='details' style={{display:'flex',gap:'3rem'}}>
@@ -27,8 +30,8 @@ function VehicleItem(props){
                             <span>{props.vehicle.color}</span>
                         </li>
                         <li>
-                            <Image src={calender_logo}/>
-                            <span>{props.vehicle.year}</span>
+                            <Image src={milage_logo}/>
+                            <span>{`${props.vehicle.milage} Kmpl`}</span>
                         </li>
                     </ul>
                     <ul className={classes.detailsUl}>
