@@ -50,3 +50,24 @@ exports.findVehicles = async(req,res)=>{
         res.status(500).json({msg : 'Something went wrong'})
     }
 }
+
+exports.findOne = async(req,res)=>{
+    try{
+        // getting vehicleId
+        const vehicleId = req.params.vehicleId
+
+        // getting the vehicle from db
+        let vehicle = await Vehicle.findById(vehicleId)
+        console.log(vehicle)
+        if(vehicle){
+            res.status(200).json({vehicle})
+        }
+        else{
+            res.status(500).json({msg : "Something went wrong"})
+        }
+    }
+    catch(err){
+        console.log(err)
+        res.status(500).json({msg : "Something went wrong"})
+    }
+}

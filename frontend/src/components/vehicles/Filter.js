@@ -75,16 +75,16 @@ function Filter(props){
             <label htmlFor="make">Make</label>
             <Form.Select ref={makeRef} className={classes.select} id="make">
                 <option value='all'>All</option>
-                <option value='tata'>Tata</option>
-                <option value='mahindra'>Mahindra</option>
-                <option value='toyota'>Toyota</option>
+                <option value='Tata'>Tata</option>
+                <option value='Mahindra'>Mahindra</option>
+                <option value='Toyota'>Toyota</option>
             </Form.Select>
             <label htmlFor="model">Model</label>
             <Form.Select ref={modelRef} className={classes.select} id="model">
                 <option value='all'>All</option>
-                <option value='nexon'>Nexon</option>
-                <option value='harrier'>Harrier</option>
-                <option value='fortuner'>Fortuner</option>
+                <option value='Nexon'>Nexon</option>
+                <option value='Harrier'>Harrier</option>
+                <option value='Fortuner'>Fortuner</option>
             </Form.Select>
             <label htmlFor="fuel_type">Fuel Type</label>
             <Form.Select ref={fuelTypeRef} className={classes.select} id="fuel_type">
