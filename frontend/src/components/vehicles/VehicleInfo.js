@@ -42,9 +42,9 @@ function VehicleInfo(props){
             <div style={{flexWrap:'wrap'}} className="d-flex pt-3 justify-content-between">
                 <Card className={classes.carousel}>
                     <Carousel>
-                        {vehicle.images.map((imgStr)=>{
+                        {vehicle.images.map((imgStr, index)=>{
                             return (
-                                <Carousel.Item>
+                                <Carousel.Item key={index}>
                                     <img className="d-block w-100" alt="img"  src={imgStr}/>
                                 </Carousel.Item>
                             )

@@ -4,6 +4,7 @@ import classes from "./CustumerReview.module.css";
 import Card from "../../UI/Card";
 
 import ReviewForm from "../reviews/ReviewForm";
+import Reviews from "../reviews/Reviews";
 
 function CustumerReview(props) {
   // making a state to togle form
@@ -12,6 +13,10 @@ function CustumerReview(props) {
 
   function toggleFormHandler() {
     setShowForm((prev) => !prev);
+  }
+
+  function onFormSubmitHandler(){
+    setShowForm(false)
   }
 
   return (
@@ -25,10 +30,10 @@ function CustumerReview(props) {
       </Button>{" "}
 
       {showForm && (
-        <ReviewForm/>
+        <ReviewForm onSubmit={onFormSubmitHandler}/>
       )}
 
-      
+      <Reviews/>
     </Card>
   );
 }

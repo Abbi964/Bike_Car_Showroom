@@ -12,8 +12,8 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav style={{gap:'2rem'}} className="me-auto ms-5">
             <NavLink className={classes.nav_link} to="/vehicles">Buy</NavLink>
-            <NavLink className={classes.nav_link} to="#home">Finance</NavLink>
-            <NavLink className={classes.nav_link} to="#home">Book Appointment</NavLink>
+            {/* <NavLink className={classes.nav_link} to="#home">Finance</NavLink> */}
+            <NavLink className={classes.nav_link} to="/appointment">Book Appointment</NavLink>
             <NavLink className={classes.nav_link} to="#home">Contact Us</NavLink>
             <NavLink className={classes.nav_link} to="#home">About Us</NavLink>
           </Nav>

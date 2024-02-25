@@ -13,6 +13,7 @@ const cors = require('cors')
 const userRouter = require('./routes/users');
 const adminRouter = require('./routes/admin');
 const vehicleRouter = require('./routes/vehicle')
+const reviewRouter = require('./routes/review')
 
 const app = express();
 // configuring dotenv
@@ -26,6 +27,7 @@ app.use(bodyParser.json())
 app.use('/user',userRouter)
 app.use('/admin',adminRouter)
 app.use('/vehicle',vehicleRouter)
+app.use('/review',reviewRouter)
 
 mongoose.connect(process.env.MONGO_DB_URL)
     .then(()=>{

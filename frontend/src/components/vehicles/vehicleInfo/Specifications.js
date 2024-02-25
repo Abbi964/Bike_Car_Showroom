@@ -47,9 +47,9 @@ function Specifications(props) {
           <tr>
             <th>Features</th>
           </tr>
-          {props.vehicle.interior_features.map((featureName) => {
+          {props.vehicle.interior_features.map((featureName, index) => {
             return (
-              <tr>
+              <tr key={index}>
                 <td>{featureName}</td>
               </tr>
             );
