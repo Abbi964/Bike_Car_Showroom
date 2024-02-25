@@ -12,11 +12,11 @@ function Footer(props){
     return (
         <div className={classes.footer}>
             <div className="address">
-                <h4>Address</h4>
-                Near xyz , lane no - 5 
-                xyz road , xyz city
+                <h6>SSzone Bike and Car Showroom</h6>
+                Abhinav Thapliyal
+                <a target="blank" href="https://github.com/Abbi964/Bike_Car_Showroom.git"><p>Github Link</p></a>
             </div>
-            <div className="social">
+            <div className={classes.social}>
                 <span className={classes.connectSpan}>Connect : </span>
                 <a href="https://www.facebook.com"><Image className={classes.img} src={fb_icon}/></a>
                 <a href="https://www.instagram.com"><Image className={classes.img} src={insta_icon}/></a>

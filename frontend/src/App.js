@@ -4,14 +4,12 @@ import Homepage from './pages/Homepage';
 import VehiclesPage from './pages/VehiclesPage';
 import VehiclePage from './pages/VehiclePage';
 import BookAppointment from './pages/BookAppointment';
-import ContactPage from './pages/ContactPage';
 
 const router = createBrowserRouter([
   {path : '/' , element : <Homepage/>},
   {path : '/vehicles' , element : <VehiclesPage/>},
   {path : '/vehicles/:vehicleId' , element : <VehiclePage/>},
-  {path : '/appointment' , element : <BookAppointment/>},
-  {path : '/contact' , element : <ContactPage/>},
+  {path : '/appointment' , element : <BookAppointment/>}
 ])
 
 function App() {
