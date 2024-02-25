@@ -49,11 +49,19 @@ h1 {
 .flexWrap{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .iframeCard{
     padding: 1rem;
     margin-left: 2rem;
     margin-top: 2rem;
+}
+
+.infoCard{
+    width: 44%;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    margin-right: 2rem;
 }
 
