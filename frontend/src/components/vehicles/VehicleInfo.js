@@ -9,6 +9,7 @@ import axios from "axios";
 import ShortInfo from "./vehicleInfo/ShortInfo";
 import Specifications from "./vehicleInfo/Specifications";
 import CustumerReview from "./vehicleInfo/CustumerReview";
+import EmiCalculator from "../finance/EmiCalculator";
 
 function VehicleInfo(props){
     // getting vehicleId from params
@@ -56,6 +57,7 @@ function VehicleInfo(props){
                 </Card>
                 <div className={classes.price}>
                     <h2>&#x20B9;{` ${(vehicle.price/100000).toFixed(2)} Lakh`}</h2>
+                    <EmiCalculator amount={vehicle.price}/>
                 </div>
             </div>
             <Specifications vehicle={vehicle}/>

@@ -35,7 +35,7 @@ function Reviews(props){
 
     return(
         <Fragment>
-        <h4 className="mt-2">Reviews { <Rating value={avgReview} precision={0.1} readOnly/> } {isNaN(avgReview) ? '' : avgReview}</h4>
+        <h4 className="mt-2">Reviews { <Rating value={+avgReview} precision={0.1} readOnly/> } {isNaN(avgReview) ? '' : avgReview}</h4>
         <div className={classes.reviews}>
             {reviews.map((review,index)=>{
                 return (<Card className={classes.review} key={index}>
