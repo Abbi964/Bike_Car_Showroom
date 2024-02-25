@@ -1,0 +1,13 @@
+
+.shortDetUl{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.shortDetUl li{
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 10px 10px 10px 10px;
+    background: #dfdfdf;
+    border-radius: 10px;
+    font-weight: 600;
+}
